@@ -1,0 +1,23 @@
+{
+    "name": "nelsius/izymail-php",
+    "description": "The official PHP SDK for Izymail API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nelsius Team",
+            "email": "contact@nelsius.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Izymail\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
