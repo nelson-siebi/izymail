@@ -15,8 +15,8 @@ export default function SEO({
     const defaultDescription = settings.site_description || 'Solution d\'emailing professionnelle haute performance pour le marché africain.';
     const finalTitle = title ? `${title} | ${siteName}` : `${siteName} - ${defaultDescription}`;
     const finalDescription = description || defaultDescription;
-    const finalUrl = url || window.location.href;
-    const finalImage = image || `${window.location.origin}/images/og-image.png`; // Fallback to a default OG image
+    const finalUrl = url || (typeof window !== 'undefined' ? window.location.href : 'https://izymail.nelsius.com');
+    const finalImage = image || 'https://izymail.nelsius.com/images/og-image.png';
 
     return (
         <Head>
