@@ -1,5 +1,6 @@
 import React from "react";
 import { Head, usePage } from "@inertiajs/react";
+import SEO from "@/Components/SEO";
 import PublicLayout from "@/Layouts/PublicLayout";
 import { Heart, Target, Users } from "lucide-react";
 
@@ -8,7 +9,10 @@ export default function About() {
 
     return (
         <PublicLayout>
-            <Head title="À propos" />
+            <SEO
+                title="À propos"
+                description="Découvrez l'histoire de Izymail et notre mission de révolutionner l'emailing en Afrique."
+            />
 
             <div className="max-w-4xl mx-auto px-6 py-24">
                 <div className="text-center mb-16">

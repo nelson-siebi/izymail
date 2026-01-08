@@ -1,6 +1,7 @@
 import React from "react";
 import { Head, Link } from "@inertiajs/react";
 import PublicLayout from "@/Layouts/PublicLayout";
+import SEO from "@/Components/SEO";
 import { Button } from "@/Components/UI/Button";
 import {
     Zap,
@@ -59,7 +60,10 @@ const features = [
 export default function Landing({ plans }) {
     return (
         <PublicLayout>
-            <Head title="Envoyez vos emails avec puissance" />
+            <SEO
+                title="Infrastructure d'Emailing Pro pour l'Afrique"
+                keywords="emailing, api email, smtp africain, nelsius, marketing email, transactional email"
+            />
 
             {/* Hero Section */}
             <section className="relative pt-24 pb-32 md:pt-40 md:pb-48 px-6 overflow-hidden">

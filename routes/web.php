@@ -20,6 +20,10 @@ use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\SmtpController;
 use App\Http\Controllers\Admin\PlanController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\SitemapController;
+
+Route::get('/sitemap.xml', [SitemapController::class, 'index']);
 
 Route::get('/', function () {
     return Inertia::render('Landing', [
@@ -28,16 +32,21 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return Inertia::render('Static/About'); })->name('about');
+    return Inertia::render('Static/About');
+})->name('about');
 Route::get('/careers', function () {
-    return Inertia::render('Static/Careers'); })->name('careers');
+    return Inertia::render('Static/Careers');
+})->name('careers');
 Route::get('/privacy', function () {
-    return Inertia::render('Static/Privacy'); })->name('privacy');
+    return Inertia::render('Static/Privacy');
+})->name('privacy');
 Route::get('/cookies', function () {
-    return Inertia::render('Static/Cookies'); })->name('cookies');
+    return Inertia::render('Static/Cookies');
+})->name('cookies');
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, 'index'])->name('blog');
 Route::get('/docs', function () {
-    return Inertia::render('Documentation'); })->name('docs');
+    return Inertia::render('Documentation');
+})->name('docs');
 
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
 Route::post('/login', [AuthenticatedSessionController::class, 'store']);
@@ -58,6 +67,8 @@ Route::get('/docs', function () {
 Route::get('/contact', function () {
     return Inertia::render('Contact');
 })->name('contact');
+
+Route::post('/contact', [ContactController::class, 'store']);
 
 Route::get('/terms', function () {
     return Inertia::render('Terms');

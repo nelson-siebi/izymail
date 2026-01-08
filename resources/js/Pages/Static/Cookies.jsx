@@ -1,12 +1,16 @@
 import React from "react";
 import { Head } from "@inertiajs/react";
+import SEO from "@/Components/SEO";
 import PublicLayout from "@/Layouts/PublicLayout";
 import { Cookie } from "lucide-react";
 
 export default function Cookies() {
     return (
         <PublicLayout>
-            <Head title="Cookies" />
+            <SEO
+                title="Cookies"
+                description="Informations sur l'utilisation des cookies sur la plateforme Izymail."
+            />
 
             <div className="max-w-3xl mx-auto px-6 py-24">
                 <div className="flex items-center gap-4 mb-10">

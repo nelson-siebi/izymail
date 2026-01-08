@@ -1,4 +1,5 @@
 import { Head, useForm, usePage } from "@inertiajs/react";
+import SEO from "@/Components/SEO";
 import PublicLayout from "@/Layouts/PublicLayout";
 import { Button } from "@/Components/UI/Button";
 import { Input } from "@/Components/UI/Input";
@@ -14,16 +15,26 @@ export default function Contact() {
         message: ""
     });
 
+    const { flash = {} } = usePage().props;
+
     const submit = (e) => {
         e.preventDefault();
         post("/contact", {
-            onSuccess: () => reset(),
+            onSuccess: () => {
+                reset();
+                if (flash.success) {
+                    // You could add a toast here, but for now we rely on the flash appearing in the layout
+                }
+            },
         });
     };
 
     return (
         <PublicLayout>
-            <Head title="Contactez-nous" />
+            <SEO
+                title="Contactez-nous"
+                description="Notre équipe support est à votre écoute. Contactez-nous pour toute question technique ou commerciale sur Izymail."
+            />
             <div className="max-w-7xl mx-auto px-6 py-24 relative overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     <div>

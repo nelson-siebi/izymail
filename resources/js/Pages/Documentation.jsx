@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Head } from "@inertiajs/react";
 import PublicLayout from "@/Layouts/PublicLayout";
+import SEO from "@/Components/SEO";
 import { Card } from "@/Components/UI/Card";
 import { Button } from "@/Components/UI/Button";
 import {
@@ -145,7 +145,10 @@ export default function Documentation() {
 
     return (
         <PublicLayout>
-            <Head title="Documentation API" />
+            <SEO
+                title="Documentation API"
+                description="Consultez notre documentation complète pour intégrer Izymail à vos applications en quelques minutes."
+            />
 
             <div className="bg-slate-950/50 border-b border-slate-800 backdrop-blur-md sticky top-0 z-30 pt-20">
                 <div className="container mx-auto px-6 h-16 flex items-center justify-between">

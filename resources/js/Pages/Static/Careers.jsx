@@ -1,12 +1,16 @@
 import React from "react";
 import { Head } from "@inertiajs/react";
+import SEO from "@/Components/SEO";
 import PublicLayout from "@/Layouts/PublicLayout";
 import { Briefcase, Code, PenTool, Rocket } from "lucide-react";
 
 export default function Careers() {
     return (
         <PublicLayout>
-            <Head title="Carrières" />
+            <SEO
+                title="Carrières"
+                description="Rejoignez l'équipe Izymail et participez à la construction de l'infrastructure d'emailing du futur pour l'Afrique."
+            />
 
             <div className="max-w-5xl mx-auto px-6 py-24 text-center">
                 <Rocket className="w-16 h-16 text-indigo-500 mx-auto mb-8" />

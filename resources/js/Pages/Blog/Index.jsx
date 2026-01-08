@@ -1,12 +1,16 @@
 import React from "react";
-import { Head, Link } from "@inertiajs/react";
+import { Link } from "@inertiajs/react";
+import SEO from "@/Components/SEO";
 import PublicLayout from "@/Layouts/PublicLayout";
 import { Calendar, ChevronRight } from "lucide-react";
 
 export default function BlogIndex({ posts }) {
     return (
         <PublicLayout>
-            <Head title="Blog" />
+            <SEO
+                title="Le Blog - Actualités et Tutoriels"
+                description="Suivez les dernières actualités de l'emailing, nos tutoriels et nos nouveaux produits sur le blog Izymail."
+            />
 
             <div className="max-w-7xl mx-auto px-6 py-24">
                 <div className="text-center mb-20">

@@ -1,12 +1,16 @@
 import React from "react";
 import { Head } from "@inertiajs/react";
+import SEO from "@/Components/SEO";
 import PublicLayout from "@/Layouts/PublicLayout";
 import { ShieldCheck } from "lucide-react";
 
 export default function Privacy() {
     return (
         <PublicLayout>
-            <Head title="Confidentialité" />
+            <SEO
+                title="Confidentialité"
+                description="Consultez notre politique de confidentialité pour comprendre comment nous protégeons vos données chez Izymail."
+            />
 
             <div className="max-w-3xl mx-auto px-6 py-24">
                 <div className="flex items-center gap-4 mb-10">

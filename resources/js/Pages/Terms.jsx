@@ -1,11 +1,15 @@
 import React from "react";
 import { Head } from "@inertiajs/react";
+import SEO from "@/Components/SEO";
 import PublicLayout from "@/Layouts/PublicLayout";
 
 export default function Terms() {
     return (
         <PublicLayout>
-            <Head title="Conditions d'Utilisation" />
+            <SEO
+                title="Conditions d'Utilisation"
+                description="Les conditions générales d'utilisation des services Izymail."
+            />
             <div className="max-w-3xl mx-auto px-6 py-32">
                 <h1 className="text-5xl md:text-6xl font-bold text-white tracking-tight mb-16 uppercase">Conditions <span className="text-indigo-500">Générales.</span></h1>
 
